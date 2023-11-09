@@ -1,0 +1,207 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+#Instr{
+    background-color: black;
+}
+#container{
+    background-image:url("./assets/lazarescu-alexandra-QKXHNLNgdAw-unsplash.jpg");
+    height: 100vh;
+    width: 100vw;
+    color: white;    
+}
+.logo{
+    height: 150px;
+    width: 150px;
+}
+#lgo{
+    height: 125px;
+    width: 125px;
+}
+#onepage{
+    height: 400px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+}
+#whole{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+#hole{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+#twologo{
+    height: 100px;
+    width: 100px;
+}
+#header{
+    display: flex;
+    justify-content:space-between;
+    width: 93vw;
+    padding: 10px;
+    align-items: center;
+
+}
+#inst{
+    color: black;
+    text-decoration: underline;
+    font-size: 17px;
+}
+#instpara{
+    border: solid;
+    border-color: white;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    width: 95%;
+    margin: 2.5%;
+}
+#instructons{ 
+    background-color: black;
+}
+#heading{
+    font-size: 45px;
+    position: relative;
+    bottom: 12%;
+}
+.user{
+    font-size: 23px;
+    font-weight: bold;
+}
+#usertxt{
+    border-radius: 10px;
+    height: 30px;
+    width: 250px;
+}
+#thm{
+    position: relative;
+    top: 25px;
+}
+.theme{
+    border-radius: 10px;
+    height: 30px;
+    width: 200px;
+    margin-top: 10px;
+    background-color: white;
+    font-size: 15px;
+}
+#play{
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+    background-color: rgb(32, 204, 32);
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+}
+#hding{
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 54vw;
+    margin-left: 40%;
+    justify-content: space-between;
+}
+#I{
+    text-align: center;
+    font-size: 65px;
+}
+#bk{
+    border-radius: 10px;
+    height: 30px;
+    width: 80px;
+    font-weight: bold;
+    background-image: linear-gradient(white,black);
+    color: white;
+    font-size: 18px;
+    justify-self: end;
+}
+#bkgrnd{
+    position: absolute;
+    height: 100vh;
+    width: 55vw;
+    z-index: -1;
+    opacity: 30%;
+}
+#lgbk{
+    display: flex;
+    justify-content: center;
+}
+#gameover{
+    background-image: url(./assets/lazarescu-alexandra-QKXHNLNgdAw-unsplash.jpg);
+}
+#gologo{
+    height: 150px;
+    width: 300px;
+}
+#ttlscore{
+    color: white;
+    font-size: 35px;
+}
+#pagain{
+    height: 40px;
+    width: 150px ;
+    color: white;
+    background-color:rgb(32, 204, 32) ;
+    font-weight: bolder;
+    border-radius: 10px;
+    font-size: 18px;
+}
+#hd{
+    color: white;
+    font-size: 50px;
+}
+.keys{
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-top: 10%;
+    align-items: center;
+}
+.scores{
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
+}
+.box{
+    border: 5px solid;
+    border-color:white;
+    background-color: transparent;
+    height: 80px;
+    width: 80px;
+    border-radius: 30%;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+#boxes{
+    display: flex;
+    width: 40vw;
+    justify-content: space-between;
+}
+#finalbox{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+#bdy{
+    background-size: cover;
+}
+
