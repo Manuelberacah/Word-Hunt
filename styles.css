@@ -191,7 +191,7 @@
 }
 #boxes{
     display: flex;
-    width: 40vw;
+    width: 50vw;
     justify-content: space-between;
 }
 #finalbox{
@@ -203,5 +203,34 @@
 }
 #bdy{
     background-size: cover;
+}
+@media (max-width: 767px) {
+    #heading{
+        font-size: xx-large;
+    }
+    #thm{
+        font-size: large;
+    }
+    #I{
+        font-size: larger;
+    }
+    #hd{
+        font-size: larger;
+    }
+    
+    .res{
+        font-size: large;
+    }
+    .box{
+        height: 50px;
+        width: 50px;
+        
+    }
+    #boxes{
+        width: 80vw;
+    }
+    .keys{
+        width: 40vh;
+    }
 }
 

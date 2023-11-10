@@ -2,7 +2,6 @@ var userInput=document.getElementById("usertxt")
 var solarSystemButton=document.getElementsByClassName("theme")[0]
 var computerScienceButton=document.getElementsByClassName("theme")[1]
 var playbutton=document.getElementById("play")
-console.log(solarSystemButton)
 solarSystemButton.onclick=()=>{
     flag=1
     solarSystemButton.style.backgroundColor="green"
