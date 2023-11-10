@@ -6,9 +6,9 @@ const spaceRelatedWords = [
     ["Orbit", "The path that an object follows around a celestial body."],
     ["Lunar", "Relating to Earth's moon."],
     ["Gravity", "The force that attracts objects with mass towards each other."],
-    ["Solar Flare", "A sudden, intense burst of energy on the Sun's surface."],
+    ["SolarFlare", "A sudden, intense burst of energy on the Sun's surface."],
     ["Comet", "A celestial object with a bright coma and a tail, usually visible from Earth."],
-    ["Black Hole", "A region of spacetime exhibiting gravitational acceleration so strong that nothing can escape it."],
+    ["BlackHole", "A region of spacetime exhibiting gravitational acceleration so strong that nothing can escape it."],
     ["Meteoroid", "A small rocky or metallic body traveling through space."],
     ["Telescope", "An optical instrument that gathers and magnifies light to observe distant objects."],
     ["Astrobiology", "The study of the potential for life beyond Earth."],
@@ -23,7 +23,7 @@ const spaceRelatedWords = [
 
   const csRelatedWords = [
     ["Algorithm", "A step-by-step procedure or formula for solving a problem."],
-    ["Data Structure", "A way of organizing and storing data to perform operations efficiently."],
+    ["DataStructure", "A way of organizing and storing data to perform operations efficiently."],
     ["Programming", "The process of designing and building an executable computer program."],
     ["Database", "A structured collection of data organized for easy retrieval and manipulation."],
     ["Machine Learning", "A subset of artificial intelligence that enables systems to learn and improve from experience."],
@@ -34,14 +34,14 @@ const spaceRelatedWords = [
     ["Debugging", "The process of finding and fixing errors or bugs in a computer program."],
     ["Operating System", "Software that manages computer hardware and provides services for computer programs."],
     ["Network", "A collection of computers and devices connected to share resources and information."],
-    ["Cloud Computing", "The delivery of computing services, including storage, processing, and software, over the internet."],
-    ["Artificial Intelligence", "The development of computer systems that can perform tasks that typically require human intelligence."],
-    ["Software Development", "The process of creating, designing, and maintaining software applications."],
-    ["Virtual Reality", "A computer-generated simulation of a three-dimensional environment that can be interacted with in a seemingly real way."],
-    ["Big Data", "Large and complex data sets that traditional data processing applications are inadequate to handle."],
+    ["CloudComputing", "The delivery of computing services, including storage, processing, and software, over the internet."],
+    ["ArtificialIntelligence", "The development of computer systems that can perform tasks that typically require human intelligence."],
+    ["SoftwareDevelopment", "The process of creating, designing, and maintaining software applications."],
+    ["VirtualReality", "A computer-generated simulation of a three-dimensional environment that can be interacted with in a seemingly real way."],
+    ["BigData", "Large and complex data sets that traditional data processing applications are inadequate to handle."],
     ["Responsive Design", "Designing web pages to ensure optimal viewing and interaction across various devices and screen sizes."],
-    ["Open Source", "Software with a source code that anyone can inspect, modify, and enhance."],
-    ["Agile Methodology", "An iterative and flexible approach to software development, emphasizing collaboration and adaptability."],
+    ["OpenSource", "Software with a source code that anyone can inspect, modify, and enhance."],
+    ["AgileMethodology", "An iterative and flexible approach to software development, emphasizing collaboration and adaptability."],
   ];
 var flag = window.localStorage.getItem("flag")
 var userName = window.localStorage.getItem("value")
@@ -60,6 +60,7 @@ var Guesses = 10
 var score=0
 var keys_list=""
 var counter=0
+var pressed_keys=[]
 
 // this function is to check and change the background 
 // and the usage of the list of words according to the theme
@@ -100,6 +101,10 @@ function insertor(){
 function word_checker(word,key){
     let list_letter = []
     let indices =[]
+    if (!pressed_keys.includes(key)){
+        pressed_keys.push(key)
+    
+    
     // converting the word to an array of letters
     for(let j=0;j<word.length;j++){
         if (!word[j]==" "){
@@ -118,13 +123,16 @@ function word_checker(word,key){
 
     // if there is match then we are adding it to the div
     if (indices.length > 0) {
-        counter+=1
+        
         for (let index of indices) {
+            counter+=1
             let change_div = document.getElementsByClassName("box")[index];
             change_div.textContent = key;    
         }
         score += indices.length;
         score_bar.innerText=`Score: ${score}`
+        console.log(Guesses,counter,list_letter.length,list_letter)
+
         decider(Guesses,counter,list_letter.length)
         
     // else we are adding it to the wrong guesses and decreasing remaing guesses 
@@ -135,17 +143,21 @@ function word_checker(word,key){
             Guesses_bar.innerText=`Remaining Guesses: ${Guesses}`
             wrong_bar.innerText=`Wrong Guesses: ${keys_list} `
 
+
         }
+        console.log(Guesses,counter,list_letter.length,list_letter)
         decider(Guesses,counter,list_letter.length)
     }
     
     
     
-    
+}
 }
 // this function will decide wheather to give next ques or the game is over
 function decider(guess,check,list){
     if (guess==0){
+        alert("The Answer "+Random_list[0])
+
         window.localStorage.setItem("score",score)
         window.location.href="over.html"
 
@@ -178,6 +190,8 @@ function updateTimer() {
 
   if (timer < 0) {
     clearInterval(intervalId)
+    alert("The Answer "+Random_list[0])
+
     window.localStorage.setItem("score",score)
     window.location.href="over.html"
   }
