@@ -2,7 +2,7 @@ Word Hunt - Guess the Word Challenge
 
 Welcome to "Word Hunt - Guess the Word"! Are you up for the challenge?
 
-#Objective
+Objective
 Your goal in this game is to guess the hidden word correctly before running out of attempts and time. With each incorrect guess, the number of remaining attempts will decrease. Be cautious—you only have a limited number of tries!
 
 How to Play
