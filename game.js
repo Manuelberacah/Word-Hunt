@@ -151,7 +151,6 @@ function word_checker(word,key){
 }
 // this function will decide wheather to give next ques or the game is over
 function decider(guess,check,list){
-    console.log(guess,counter,list)
     if (guess==0){
         window.localStorage.setItem("score",score)
         window.location.href="over.html"
@@ -178,7 +177,7 @@ insertor()
 
 let timer = 30;
 
-// this fuction creats the timer
+// this fuction creates the timer
 function updateTimer() {
   timer_bar.innerText=`Time: ${timer}`
   timer--;
