@@ -56,9 +56,10 @@
 
 }
 #inst{
-    color: red;
+    color: black;
     text-decoration: underline;
-    font-size: 17px;
+    font-weight: bold;
+    font-size: 19px;
 }
 #instpara{
     border: solid;

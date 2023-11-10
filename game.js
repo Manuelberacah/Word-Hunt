@@ -61,20 +61,14 @@ var score=0
 var keys_list=""
 var counter=0
 
-const solarmusic=new Audio("solarsound.mp3")
-const csmusic=new Audio("cssound.mp3")
 // this function is to check and change the background 
 // and the usage of the list of words according to the theme
 function selector(flag){
     
     if (flag==1){
-        solarmusic.play()
-        solarmusic.loop=true
         list_words=spaceRelatedWords
         document.body.style.backgroundImage="url(./assets/solarsystem.jpg)"
     }else{
-        csmusic.play()
-        csmusic.loop=true
         list_words=csRelatedWords
         document.body.style.backgroundImage="url(./assets/csbackground.jpeg)"
     }
